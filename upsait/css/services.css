@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #121212;
+    padding-top: 70px;
+}
+
+header {
+    padding: 15px 0;
+    position: fixed; /* Фиксируем меню */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #121212;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 20px;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+nav ul li a:hover {
+    color: #EB4577;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #EB4577;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.social-icons img {
+    height: 24px;
+    width: 24px;
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); 
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Контейнер услуг */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Карточка услуги */
+.service {
+    border: 0.5px solid #f1a0b8;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #121212;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок услуги */
+.service-title {
+    margin: 0 0 20px 0;
+    text-align: left;
+    color: #EB4577;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Контент услуги (изображение + текст) */
+.service-content {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+/* Изображение услуги */
+.service-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Текст услуги */
+.service-text {
+    flex: 1;
+    color: #F5F5F5;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Кнопка услуги */
+.service-button-link {
+    display: block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #EB4577;
+    text-decoration: none;
+    font-size: 14px;
+    border: 2px solid #EB4577;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.service-button-link:hover {
+    background-color: #f1a0b8;
+}
+
+.simple-footer {
+    background-color: #121212;
+    color: #F5F5F5;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    padding: 30px 50px;
+    border-top: 1px solid #323232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contacts h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-contacts p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.footer-nav ul li a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    opacity: 0.8;
+}

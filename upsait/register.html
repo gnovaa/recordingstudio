@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/music.png"/>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Регистрация</h1>
+        <form id="registerForm" action="register.php" method="POST">
+            <div class="form-group">
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login" placeholder="Придумайте логин">
+                <div class="hint">Логин должен содержать только английские буквы</div>
+                <span class="error-message" id="login-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Придумайте пароль">
+                <div class="hint">Пароль должен быть от 3 до 10 символов и содержать цифры и буквы</div>
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            
+            <p class="login-link">Уже зарегистрированы? <a href="auth.html">Войти в систему</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Получаем значения полей
+            const login = document.getElementById('login').value.trim();
+            const password = document.getElementById('password').value.trim();
+            
+            // Сбрасываем предыдущие ошибки
+            document.getElementById('login-error').textContent = '';
+            document.getElementById('password-error').textContent = '';
+            
+            let isValid = true;
+            
+            // Проверка логина
+            if (login === '') {
+                document.getElementById('login-error').textContent = 'Поле логин обязательно для заполнения';
+                isValid = false;
+            } else if (!/^[a-zA-Z]+$/.test(login)) {
+                document.getElementById('login-error').textContent = 'Логин должен содержать только английские буквы';
+                isValid = false;
+            }
+            
+            // Проверка пароля
+            if (password === '') {
+                document.getElementById('password-error').textContent = 'Поле пароль обязательно для заполнения';
+                isValid = false;
+            } else if (password.length < 3 || password.length > 10) {
+                document.getElementById('password-error').textContent = 'Пароль должен быть от 3 до 10 символов';
+                isValid = false;
+            } else if (!/[0-9]/.test(password) || !/[a-zA-Z]/.test(password)) {
+                document.getElementById('password-error').textContent = 'Пароль должен содержать и цифры, и буквы';
+                isValid = false;
+            }
+            
+            // Если форма валидна, отправляем данные на сервер
+            if (isValid) {
+                this.submit();
+            }
+        });
+    </script>
+</body>
+</html>

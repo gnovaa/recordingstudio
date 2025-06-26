@@ -1,0 +1,140 @@
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #EB4577;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #EB4577;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #f1a0b8;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #EB4577;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #f1a0b8;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    font-size: 12px;
+}
+
+.register-link a {
+    color: #f1a0b8;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    font-size: 12px;
+}
+
+.login-link a {
+    color: #f1a0b8;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.hint {
+    font-size: 9px;
+    color: #f1a0b8;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.main-page-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    width: 100%; /* Добавьте это */
+    display: block; /* Добавьте это */
+}
+
+.main-page-link a {
+    color: #EB4577;
+    text-decoration: none;
+    display: inline-block; /* Добавьте это */
+}
+
+.main-page-link a:hover {
+    text-decoration: underline;
+}

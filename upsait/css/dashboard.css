@@ -1,0 +1,91 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212;
+    color: #F5F5F5;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.logout-btn {
+    background: #EB4577;
+    color: #F5F5F5;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #f1a0b8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    background: #fff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    background: #EB4577;
+    color: #F5F5F5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #f1a0b8;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+}
+
+.success {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+}
+
+.error {
+    border-color: #f44336;
+    background: #FFEBEE;
+}

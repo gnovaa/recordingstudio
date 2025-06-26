@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #121212;
+}
+
+header {
+    padding: 15px 0;
+    position: static;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 20px;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+nav ul li a:hover {
+    color: #EB4577;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #EB4577;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.social-icons img {
+    height: 24px;
+    width: 24px;
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.2)); 
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 1220px; /*тут менять размер??*/
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #F5F5F5;;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.about p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.advantages h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #EB4577;
+}
+
+.advantages ul {
+    list-style: none;
+}
+
+.advantages ul li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.clients p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.clients .cta {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+    color: #EB4577;
+}
+
+.simple-footer {
+    background-color: #121212;
+    color: #F5F5F5;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    padding: 30px 50px;
+    border-top: 1px solid #323232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contacts h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-contacts p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.footer-nav ul li a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    opacity: 0.8;
+}

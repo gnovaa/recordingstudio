@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="shortcut icon" href="images/music.png"/>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Авторизация</h1>
+        <!-- Форма теперь отправляет данные на auth.php методом POST -->
+        <form id="authForm" action="auth.php" method="POST">
+            <div class="form-group">
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login" placeholder="Введите ваш логин">
+                <span class="error-message" id="login-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите ваш пароль">
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <button type="submit" class="submit-btn">Войти</button>
+
+            <!-- Добавленная строка с ссылкой на регистрацию -->
+            <p class="register-link">Вы еще не зарегистрированы? <a href="register.html">Перейти к регистрации</a></p>
+            <p class="main-page-link"><a href="main.html">Вернуться на главную страницу</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('authForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Получаем значения полей
+            const login = document.getElementById('login').value.trim();
+            const password = document.getElementById('password').value.trim();
+            
+            // Сбрасываем предыдущие ошибки
+            document.getElementById('login-error').textContent = '';
+            document.getElementById('password-error').textContent = '';
+            
+            let isValid = true;
+            
+            // Проверка логина
+            if (login === '') {
+                document.getElementById('login-error').textContent = 'Поле логин обязательно для заполнения';
+                isValid = false;
+            }
+            
+            // Проверка пароля
+            if (password === '') {
+                document.getElementById('password-error').textContent = 'Поле пароль обязательно для заполнения';
+                isValid = false;
+            }
+            
+            // Если форма валидна, отправляем данные на сервер
+            if (isValid) {
+                this.submit();
+            }
+        });
+    </script>
+</body>
+</html>
